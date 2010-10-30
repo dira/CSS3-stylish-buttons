@@ -9,6 +9,7 @@
   box-shadow: 0 1px 2px rgba(0,0,0,.2)
 
 @mixin gradient($top, $bottom)
+  background-color= $bottom
   background= -webkit-gradient(linear, left top, left bottom, from($top), to($bottom))
   background= -moz-linear-gradient(top, $top,  $bottom)
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$top}', endColorstr='#{$bottom}')
@@ -31,7 +32,6 @@
 
 @mixin color($background)
   border: solid 1px darken($background, 3%)
-  background-color= $background
   @include gradient(lighten($background, 13%), $background)
   color= mix(#fff, $background, 90%)
   &:hover
