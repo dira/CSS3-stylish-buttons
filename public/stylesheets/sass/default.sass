@@ -1,0 +1,54 @@
+@import '_buttons'
+
+// generic
+body
+  width: 650px
+  padding: 0
+  margin: 0 auto
+
+body, input
+  font: 14px/130% Arial, Helvetica, sans-serif
+
+h1
+  color: #555
+  margin: 30px 0 40px
+
+.smallprint
+  font-size: 0.8em
+  color: #777
+
+p
+  margin: 0.5em 0
+
+div
+  a, input
+    margin: 5px 10px
+
+ol
+  margin-top: 30px
+li
+  margin-bottom: 20px
+
+.gist-meta
+  display: none
+
+// buttons
+.button
+  @include button
+
+.orange
+  @include color(#f78d1d)
+.red
+  @include color(#AA1317)
+.blue
+  @include color(#0078A5)
+.green
+  @include color(#4E7D0E)
+.pink
+  @include color(#F171AB)
+
+.medium
+  font-size: 12px
+.small
+  font-size: 10px
+  padding: 0.2em 1em 0.275em

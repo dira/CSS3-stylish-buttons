@@ -13,26 +13,42 @@
   background= -moz-linear-gradient(top, $top,  $bottom)
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$top}', endColorstr='#{$bottom}')
 
-@mixin stylish_button($background)
+@mixin button
   display: inline-block
   padding: .5em 2em .55em
   outline: none
   cursor: pointer
   text-align: center
   text-decoration: none
-  border: solid 1px darken($background, 3%)
-  background-color= $background
-  @include gradient(lighten($background, 13%), $background)
   @include rounded('.5em')
   @include shadow
-  color= mix(#fff, $background, 90%)
   text-shadow: 0 1px 1px rgba(0,0,0,.3)
-
   &:hover
-    @include gradient(lighten($background, 10%), darken($background, 5%))
     text-decoration: none
   &:active
     position: relative
     top: 1px
+
+@mixin color($background)
+  border: solid 1px darken($background, 3%)
+  background-color= $background
+  @include gradient(lighten($background, 13%), $background)
+  color= mix(#fff, $background, 90%)
+  &:hover
+    @include gradient(lighten($background, 10%), darken($background, 5%))
+  &:active
     @include gradient($background, lighten($background, 10%))
     color= mix(#fff, $background, 70%)
+
+// More rounded borders
+.rounded
+  @include rounded(2em)
+
+// Mozilla: don't show border around the button's text on click
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"],
+input[type="file"] > input[type="button"]
+  &::-moz-focus-inner
+    border: none

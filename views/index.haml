@@ -1,56 +1,51 @@
 <!DOCTYPE html>
+- title = "Sass super-mixins for stylish buttons"
 %html{ :lang => "en" }
   %head
     %meta{ :charset => 'utf-8' }
-    %link{ :rel => 'stylesheet', :href => '/default.css' }
-    %title Stylish buttons with CSS3
+    %link{ :rel => 'stylesheet', :href => '/stylesheets/default.css' }
+    %title= title
 
   %body
-    %h1 Stylish buttons with CSS3
+    %h1= title
 
-
-    %div
-      %a.black Rectangle
-      %a.black.rounded Rounded
-      %a.black.medium Medium
-      %a.black.small Small
-
-    %div
-      %a.gray Rectangle
-      %a.gray.rounded Rounded
-      %a.gray.medium Medium
-      %a.gray.small Small
-
-    -# %a.white White
+    %p
+      You can get these yummy, pure-CSS buttons on your webpage in an instant*
+      -# This page presents the
+      -# %a{ :href => "http://www.webdesignerwall.com/tutorials/css3-gradient-buttons/" } CSS3 Gradient Buttons
+      -# by Nick La
 
     %div
-      %a.orange Rectangle
-      %a.orange.rounded Rounded
-      %a.orange.medium Medium
-      %a.orange.small Small
+      %input.button.orange{ :type => "submit", :value => "Submit" }
+      %a.button.blue Rectangle
+      %a.button.red.rounded Rounded
+      %a.button.green.medium Medium
+      %a.button.pink.small Small
 
-    %div
-      %a.red Rectangle
-      %a.red.rounded Rounded
-      %a.red.medium Medium
-      %a.red.small Small
-    %div
-      %a.blue Rectangle
-      %a.blue.rounded Rounded
-      %a.blue.medium Medium
-      %a.blue.small Small
-    %div
-      %a.rosy Rectangle
-      %a.rosy.rounded Rounded
-      %a.rosy.medium Medium
-      %a.rosy.small Small
-    %div
-      %a.green Rectangle
-      %a.green.rounded Rounded
-      %a.green.medium Medium
-      %a.green.small Small
-    %div
-      %a.pink Rectangle
-      %a.pink.rounded Rounded
-      %a.pink.medium Medium
-      %a.pink.small Small
+    %p.smallprint *You need to use Sass for writing your stylesheets
+
+    %ol
+      %li
+        %p
+          Copy the
+          %a{ :href => "/stylesheets/sass/_buttons.sass" } Buttons mixin file
+          in your Sass folder
+      %li
+        %p Put this code in your Sass file
+        <script src="http://gist.github.com/655550.js?file=your.sass"></script>
+      %li
+        %p And this code in your Haml file
+        <script src="http://gist.github.com/655550.js?file=your.haml"></script>
+
+    %p
+      You'll get an orange button as an input field:
+      %input.button.orange{ :type => "submit", :value => "Submit" }
+      and as a link:
+      %a.button.orange Rectangle
+
+    %p
+      By changing the color code in your Sass file you can get the same kind of buttons in
+      %strong any color.
+      All the gradient, border, text colors are calculated automatically, so you only need to provide the base color and you're set.
+
+    %p I strongly recommend not using color names for your CSS classes ("orange" in the example). Use instead semantic names that reflect the meaning of the elements, and attach the colors from CSS under those semantic names.
