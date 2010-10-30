@@ -32,6 +32,7 @@ module Rack
     end
 
     def valid?(source, generated)
+      return false # problem with Sass files with mixins
       ::File.exist?(generated) && ::File.mtime(generated) > ::File.mtime(source)
     end
   end
