@@ -1,14 +1,23 @@
 @import '_buttons'
 body
+  width: 600px
+  margin: 0 auto
   font: 14px/100% Arial, Helvetica, sans-serif
 
 h1
   color: #555
+  margin: 40px 0
 
 *
-  margin: 30px
+  margin: 10px
 
-
+.black
+  @include stylish_button(#000)
+.gray
+  @include stylish_button(#777)
+.white
+  @include stylish_button(#FFF)
+  color: black
 .orange
   @include stylish_button(#f78d1d)
 .red
@@ -21,5 +30,11 @@ h1
   @include stylish_button(#4E7D0E)
 .pink
   @include stylish_button(#F171AB)
-.gray
-  @include stylish_button(#777)
+
+.rounded
+  @include rounded(2em)
+.medium
+  font-size: 12px
+.small
+  font-size: 10px
+  padding: 0.2em 1em 0.275em
