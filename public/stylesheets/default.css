@@ -11,8 +11,7 @@ body {
   margin: 0 auto; }
 
 body, input {
-  font: 15px/140% "Lucida Grande", "Lucida Sans", Verdana, Arial, Helvetica, sans-serif;
-  color: #666666; }
+  font: 14px/140% Arial, Helvetica, sans-serif; }
 
 footer {
   display: block;
@@ -28,10 +27,9 @@ footer {
     footer p:first-of-type {
       margin-left: 0; }
 
-h1, h2 {
-  color: black;
-  font-size: 1em;
-  margin: 30px 0 15px; }
+h1 {
+  color: #555555;
+  margin: 30px 0 40px; }
 
 p {
   margin: 1em 0; }
