@@ -43,29 +43,36 @@
       %a.button.brown.small Small
 
     %h2 How to do this
-    %ol
+    %ul
       %li
+        %h3 You have no idea what Sass is?
         %p
-          Copy the
-          %a{ :href => "stylesheets/sass/_buttons.sass" } Buttons mixin file
-          in your Sass folder
+          %a{ :href => "/generator.html" } Generate CSS for any color of buttons
       %li
-        %p Put this code in your Sass file
-        <script src="http://gist.github.com/655550.js?file=your.sass"></script>
-      %li
-        %p And this code in your Haml file
-        <script src="http://gist.github.com/655550.js?file=your.haml"></script>
+        %h3 You love Sass?
+        %ol
+          %li
+            %p
+              Copy the
+              %a{ :href => "stylesheets/sass/_buttons.sass" } Buttons mixin file
+              in your Sass folder
+          %li
+            %p Put this code in your Sass file
+            <script src="http://gist.github.com/655550.js?file=your.sass"></script>
+          %li
+            %p And this code in your Haml file
+            <script src="http://gist.github.com/655550.js?file=your.haml"></script>
 
-    %p
-      You'll get a nice button as an input field:
-      %input.button.dark_green{ :type => "submit", :value => "Submit" }
-      and as a link:
-      %a.button.dark_green Click me
+        %p
+          You'll get a nice button as an input field:
+          %input.button.dark_green{ :type => "submit", :value => "Submit" }
+          and as a link:
+          %a.button.dark_green Click me
 
-    %p
-      Change the color in your Sass file to the one you like (you can use the 
-      %a{ :href => "http://html-color-codes.com/"} Web color chart
-      %span> ).
+        %p
+          Change the color in your Sass file to the one you like (you can use the 
+          %a{ :href => "http://html-color-codes.com/"} Web color chart
+          %span> ).
 
     %footer
       %p

@@ -10,8 +10,9 @@
   %body
     %h1= title
 
+    %h2 Pick the base color for your buttons:
     %form{ :method => "POST", :action => "generate" }
-      %input{ :type => "text", :name => "color", :value => "", :class => "color" }
+      %input{ :type => "text", :name => "color", :value => "#C33", :class => "color" }
       %input{ :type => "submit", :value => "Submit" }
 
     %footer
