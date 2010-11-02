@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+- title = "Generate stylish CSS3 buttons"
+%html{ :lang => "en" }
+  %head
+    %meta{ :charset => 'utf-8' }
+    %link{ :rel => 'stylesheet', :href => 'stylesheets/default.css' }
+    %title= title
+
+  %body
+    %h1= title
+
+    %form{ :method => "POST", :action => "generate" }
+      %input{ :type => "text", :name => "color", :value => "#CC3333" }
+      %input{ :type => "submit", :value => "Submit" }
+
+    %footer
+      %p
+        code by
+        %a{ :href => "http://dira.ro" } dira.ro
+      %p
+        Inspired by the
+        %a{ :href => "http://www.webdesignerwall.com/tutorials/css3-gradient-buttons/" } CSS3 Gradient buttons tutorial

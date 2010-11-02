@@ -17,7 +17,7 @@ module Rack
 
     def call(env)
       path = env["REQUEST_PATH"]
-      extension = ::File.extname(path)[1..-1]
+      extension = ::File.extname(path)[1..-1] rescue nil
       generator = GENERATORS[@generators[extension.to_sym]] rescue nil
       if generator
         source = path.gsub(/^\//, "#{@source_path}/")
