@@ -6,11 +6,13 @@ class CSSButtons < Sinatra::Base
 
   get '/' do
     @title = "Sass super-mixins for stylish buttons"
+    @navigation = ['home']
     haml :index
   end
 
   get '/generator' do
     @title = "Generate CSS for stylish buttons"
+    @navigation = [['home', '/'], ['CSS generator']]
     @color = h(params["color"] || "C33")
     haml :generator
   end
@@ -18,6 +20,7 @@ class CSSButtons < Sinatra::Base
   post '/generate' do
     @color = h("#" + params[:color])
     @title = "Stylish buttons for #{@color}"
+    @navigation = [['home', '/'], ['CSS generated']]
     @css = css
     haml :generate
   end

@@ -7,6 +7,15 @@
 
   %body
     #content
+      - if @navigation
+        %nav
+          - @navigation.each do |name, link|
+            &#8226;
+            - if link
+              %a{ :href => link }= name
+            - else
+              =name
+
       %h1= @title
 
       = yield
