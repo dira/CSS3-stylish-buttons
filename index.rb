@@ -2,6 +2,8 @@ require 'sinatra/base'
 require 'sass'
 
 class CSSButtons < Sinatra::Base
+  set :public, "public"
+
   get '/' do
     @title = "Sass super-mixins for stylish buttons"
     haml :index
@@ -23,10 +25,6 @@ class CSSButtons < Sinatra::Base
   get "/stylesheets/:name.css" do
     headers['Content-Type'] = 'text/css'
     sass :"../public/stylesheets/sass/#{params["name"]}"
-  end
-
-  get "/tmp" do
-    sass :"../public/stylesheets/sass/buttons"
   end
 
   helpers do

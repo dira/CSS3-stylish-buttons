@@ -1,6 +1,6 @@
-%script{ :type => "text/javascript", :src => 'javascripts/jscolor.js' }
-
 %h2 Pick the base color for your buttons:
 %form{ :method => "POST", :action => "generate" }
   %input{ :type => "text", :name => "color", :value => "#{@color}", :class => "color" }
   %input{ :type => "submit", :value => "Submit" }
+
+%script{ :type => "text/javascript", :src => 'javascripts/jscolor.js' }
