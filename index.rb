@@ -9,12 +9,12 @@ class CSSButtons < Sinatra::Base
 
   get '/generator' do
     @title = "Generate CSS for stylish buttons"
-    @color = params["color"] || "C33"
+    @color = h(params["color"] || "C33")
     haml :generator
   end
 
   post '/generate' do
-    @color = "#" + params[:color]
+    @color = h("#" + params[:color])
     @title = "Stylish buttons for #{@color}"
     @css = css
     haml :generate
@@ -27,6 +27,11 @@ class CSSButtons < Sinatra::Base
 
   get "/tmp" do
     sass :"../public/stylesheets/sass/buttons"
+  end
+
+  helpers do
+    include Rack::Utils
+    alias_method :h, :escape_html
   end
 
   protected

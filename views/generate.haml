@@ -6,7 +6,7 @@
 = buttons
 
 %p
-  %a{ :href => "/generator?color=#{URI.escape(@color)}" } Try another color
+  %a{ :href => "/generator?color=#{h URI.escape(@color)}" } Try another color
 
 %h2 Put this in your CSS
 %textarea{ :rows => 50 }= @css
