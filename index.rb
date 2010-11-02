@@ -3,6 +3,7 @@ require 'sass'
 
 class CSSButtons < Sinatra::Base
   set :public, "public"
+  Rack::Mime::MIME_TYPES.merge!({'.sass' => "text/css"})
 
   get '/' do
     @title = "Sass super-mixins for stylish buttons"
