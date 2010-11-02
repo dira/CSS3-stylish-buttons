@@ -59,10 +59,6 @@ a
   &:hover
     background-color: wheat
 
-.buttons
-  a, input
-    margin: 5px 10px
-
 li
   margin-bottom: 20px
 
@@ -71,8 +67,13 @@ li
   margin-top: 50px
 
 // buttons
+.buttons
+  a, input
+    margin: 5px 10px
+
 .button
   @include button
+  margin-right: 5px
 
 // More rounded borders
 .rounded
@@ -99,6 +100,8 @@ li
   @include color(#993)
 .dark_blue
   @include color(#228)
+.black
+  @include color(#000)
 
 .medium
   font-size: 12px
