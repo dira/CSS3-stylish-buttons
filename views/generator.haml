@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-- title = "Generate stylish CSS3 buttons"
-%html{ :lang => "en" }
-  %head
-    %meta{ :charset => 'utf-8' }
-    %link{ :rel => 'stylesheet', :href => 'stylesheets/default.css' }
-    %script{ :type => "text/javascript", :src => 'javascripts/jscolor.js' }
-    %title= title
+%script{ :type => "text/javascript", :src => 'javascripts/jscolor.js' }
 
-  %body
-    %h1= title
-
-    %h2 Pick the base color for your buttons:
-    %form{ :method => "POST", :action => "generate" }
-      %input{ :type => "text", :name => "color", :value => "#C33", :class => "color" }
-      %input{ :type => "submit", :value => "Submit" }
-
-    %footer
-      %p
-        code by
-        %a{ :href => "http://dira.ro" } dira.ro
-      %p
-        Inspired by the
-        %a{ :href => "http://www.webdesignerwall.com/tutorials/css3-gradient-buttons/" } CSS3 Gradient buttons tutorial
+%h2 Pick the base color for your buttons:
+%form{ :method => "POST", :action => "generate" }
+  %input{ :type => "text", :name => "color", :value => "#{@color}", :class => "color" }
+  %input{ :type => "submit", :value => "Submit" }

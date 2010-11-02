@@ -1,0 +1,15 @@
+- buttons = %(<div>\n  <a class="button">Click</a>\n  <input class="button" type="submit" value="Submit"/>\n</div>)
+%style{ :type => "text/css"}
+  = @css
+
+%h2 The buttons look like this
+= buttons
+
+%p
+  %a{ :href => "/generator?color=#{URI.escape(@color)}" } Try another color
+
+%h2 Put this in your CSS
+%textarea{ :rows => 50 }= @css
+
+%h2 And this in your HTML
+%textarea{ :rows => 5 }= buttons

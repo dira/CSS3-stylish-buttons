@@ -1,83 +1,64 @@
-<!DOCTYPE html>
-- title = "Sass super-mixins for stylish buttons"
-%html{ :lang => "en" }
-  %head
-    %meta{ :charset => 'utf-8' }
-    %link{ :rel => 'stylesheet', :href => 'stylesheets/default.css' }
-    %title= title
+%p
+  Yesterday I found the super yummy
+  %a{ :href => "http://www.webdesignerwall.com/demo/css-buttons.html"} pure-CSS buttons
+  designed by
+  %a{ :href => "http://www.webdesignerwall.com/tutorials/css3-gradient-buttons/" } Web Designer Wall
+  %span> .
 
-  %body
-    %h1= title
+%p
+  Wondering how one could use this design wisdom despite not posessing the art of subtle gradients and matching colors, I created code that does this for you by magic. And by magic I mean 
+  %a{ :href => "http://sass-lang.com/" } Sass
+  with mixins and the new powerful
+  %a{ :href => "http://nex-3.com/posts/89-powerful-color-manipulation-with-sass"} color functions
+  from version 3.0.
 
+%p
+  This means that you are not restricted to the (wonderful) colors for which you have the CSS from the
+  %a{ :href => "http://www.webdesignerwall.com/tutorials/css3-gradient-buttons/" } Web Designer Wall tutorial
+  %span> ...
+%div
+  %input.button.orange{ :type => "submit", :value => "Button" }
+    %a.button.blue Link
+  %a.button.red.rounded Rounded
+  %a.button.green.medium Medium
+  %a.button.pink.small Small
+
+%p ... but you can easily make buttons with the colors you want:
+%div
+  %input.button.dark_green{ :type => "submit", :value => "Button" }
+    %a.button.violet Link
+  %a.button.olive.rounded Rounded
+  %a.button.dark_blue.medium Medium
+  %a.button.brown.small Small
+
+%h2 How to do this
+%ul
+  %li
+    %h3 You have no idea what Sass is?
     %p
-      Yesterday I found the super yummy
-      %a{ :href => "http://www.webdesignerwall.com/demo/css-buttons.html"} pure-CSS buttons
-      designed by
-      %a{ :href => "http://www.webdesignerwall.com/tutorials/css3-gradient-buttons/" } Web Designer Wall
-      %span> .
-
-    %p
-      Wondering how one could use this design wisdom despite not posessing the art of subtle gradients and matching colors, I created code that does this for you by magic. And by magic I mean 
-      %a{ :href => "http://sass-lang.com/" } Sass
-      with mixins and the new powerful
-      %a{ :href => "http://nex-3.com/posts/89-powerful-color-manipulation-with-sass"} color functions
-      from version 3.0.
-
-    %p
-      This means that you are not restricted to the (wonderful) colors for which you have the CSS from the
-      %a{ :href => "http://www.webdesignerwall.com/tutorials/css3-gradient-buttons/" } Web Designer Wall tutorial
-      %span> ...
-    %div
-      %input.button.orange{ :type => "submit", :value => "Button" }
-      %a.button.blue Link
-      %a.button.red.rounded Rounded
-      %a.button.green.medium Medium
-      %a.button.pink.small Small
-
-    %p ... but you can easily make buttons with the colors you want:
-    %div
-      %input.button.dark_green{ :type => "submit", :value => "Button" }
-      %a.button.violet Link
-      %a.button.olive.rounded Rounded
-      %a.button.dark_blue.medium Medium
-      %a.button.brown.small Small
-
-    %h2 How to do this
-    %ul
+      %a{ :href => "/generator" } Generate CSS for any color of buttons
+  %li
+    %h3 You love Sass?
+    %ol
       %li
-        %h3 You have no idea what Sass is?
         %p
-          %a{ :href => "/generator.html" } Generate CSS for any color of buttons
+          Copy the
+          %a{ :href => "stylesheets/sass/_buttons.sass" } Buttons mixin file
+          in your Sass folder
       %li
-        %h3 You love Sass?
-        %ol
-          %li
-            %p
-              Copy the
-              %a{ :href => "stylesheets/sass/_buttons.sass" } Buttons mixin file
-              in your Sass folder
-          %li
-            %p Put this code in your Sass file
-            <script src="http://gist.github.com/655550.js?file=your.sass"></script>
-          %li
-            %p And this code in your Haml file
-            <script src="http://gist.github.com/655550.js?file=your.haml"></script>
+        %p Put this code in your Sass file
+        <script src="http://gist.github.com/655550.js?file=your.sass"></script>
+      %li
+        %p And this code in your Haml file
+        <script src="http://gist.github.com/655550.js?file=your.haml"></script>
 
-        %p
-          You'll get a nice button as an input field:
-          %input.button.dark_green{ :type => "submit", :value => "Submit" }
-          and as a link:
-          %a.button.dark_green Click me
+    %p
+      You'll get a nice button as an input field:
+      %input.button.dark_green{ :type => "submit", :value => "Submit" }
+        and as a link:
+      %a.button.dark_green Click me
 
-        %p
-          Change the color in your Sass file to the one you like (you can use the 
-          %a{ :href => "http://html-color-codes.com/"} Web color chart
-          %span> ).
-
-    %footer
-      %p
-        code by
-        %a{ :href => "http://dira.ro" } dira.ro
-      %p
-        Inspired by the
-        %a{ :href => "http://www.webdesignerwall.com/tutorials/css3-gradient-buttons/" } CSS3 Gradient buttons tutorial
+    %p
+      Change the color in your Sass file to the one you like (you can use the 
+      %a{ :href => "http://html-color-codes.com/"} Web color chart
+      %span> ).

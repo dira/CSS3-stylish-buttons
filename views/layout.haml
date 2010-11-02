@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+%html{ :lang => "en" }
+  %head
+    %meta{ :charset => 'utf-8' }
+    %link{ :rel => 'stylesheet', :href => 'stylesheets/default.css' }
+    %title= @title
+
+  %body
+    #content
+      %h1= @title
+
+      = yield
+
+    %footer
+      %p
+        code by
+        %a{ :href => "http://dira.ro" } dira.ro
+      %p
+        Inspired by the
+        %a{ :href => "http://www.webdesignerwall.com/tutorials/css3-gradient-buttons/" } CSS3 Gradient buttons tutorial
