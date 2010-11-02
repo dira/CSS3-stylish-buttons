@@ -17,12 +17,12 @@ class CSSButtons < Sinatra::Base
     haml :generator
   end
 
-  post '/generate' do
+  post %r{/generate(.part)?} do
     @color = h("#" + params[:color])
     @title = "Stylish buttons for #{@color}"
     @navigation = [['home', '/'], ['CSS generated']]
     @css = css
-    haml :generate
+    haml :generate, :layout => !params["captures"]
   end
 
   get "/stylesheets/:name.css" do
