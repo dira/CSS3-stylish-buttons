@@ -7,7 +7,7 @@ module Rack
   class CSSGenerator
     def call(env)
       req = Request.new(env)
-      response = Rack::Response.new
+      response = Response.new
       response.header['Content-Type'] = 'text/html'
       response.write(html(req.params["color"]))
       response.finish
@@ -36,6 +36,7 @@ module Rack
     end
 
     def html(color)
+      color = "##{color}" unless color.match(/#[a-f0-9]{6}/)
       css = css(color)
       buttons = <<-eob
 <div>
@@ -64,6 +65,7 @@ module Rack
     <h1>Here is the CSS for the color #{color}</h1>
     <h2>The buttons will look like this:</h2>
     #{buttons}
+    <p><a href="/generator.html?color=#{color}">Try another color</a></p>
     <h2>Put this in your CSS:</h2>
     <textarea rows="45">#{css}</textarea>
     <h2>And this in your HTML:</h2>
@@ -81,7 +83,7 @@ end
 
 use Rack::SiteGenerator #haml
 use Sass::Plugin::Rack
-use Rack::Static, :urls => ["/index.html", "/generator.html", "/stylesheets/default.css"], :root => "public"
+use Rack::Static, :urls => ["/index.html", "/generator.html", "/stylesheets/default.css", "/javascripts"], :root => "public"
 map "/generate" do
   run Rack::CSSGenerator.new
 end
