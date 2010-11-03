@@ -1,0 +1,25 @@
+=border-radius(!border)
+  -webkit-border-radius= !border
+  -moz-border-radius= !border
+  -khtml-border-radius= !border
+  border-radius= !border
+
+=border-radius-top(!border)
+  -webkit-border-radius-topright= !border
+  -webkit-border-radius-topleft= !border
+  -moz-border-radius-topleft= !border
+  -moz-border-radius-topright= !border
+  -khtml-border-top-right-radius= !border
+  -khtml-border-radius= !border
+  border-top-right-radius= !border
+  border-top-left-radius= !border
+
+=clearfix
+  zoom: 1
+  &:after
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+

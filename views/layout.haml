@@ -7,14 +7,22 @@
 
   %body
     #content
-      - if @navigation
-        %nav
-          - @navigation.each do |name, link|
-            &#8226;
-            - if link
-              %a{ :href => link }= name
-            - else
-              =name
+      %header
+        - if @navigation
+          %nav
+            - @navigation.each do |name, link|
+              &#8226;
+              - if link
+                %a{ :href => link }= name
+              - else
+                =name
+        %div
+          by
+          %a{ :href => "http://dira.ro" } dira.ro
+          &#8226;
+          this app is
+          %a{ :href => "http://github.com/dira/CSS3-stylish-buttons" } on github
+          &#8226;
 
       %h1= @title
 
