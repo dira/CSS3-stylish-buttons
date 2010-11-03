@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sass'
+require 'helpers/clippy'
 
 class CSSButtons < Sinatra::Base
   set :public, "public"

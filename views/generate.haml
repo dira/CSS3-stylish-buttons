@@ -1,13 +1,19 @@
-- buttons = %(<div>\n  <a class="button">Click</a>\n  <input class="button" type="submit" value="Submit"/>\n</div>)
+- buttons = %(<div>\n  <a class="button">Link</a>\n  <input class="button" type="submit" value="Button"/>\n</div>)
 %style{ :type => "text/css"}
   = @css
 
-%h2 The buttons look like this
+%h2 The lovely buttons
 .buttons
   = buttons
 
-%h2 Put this in your CSS
-%textarea{ :rows => 50 }= @css
+%h2
+  HTML
+  = clippy(buttons)
 
-%h2 And this in your HTML
 %textarea{ :rows => 5 }= buttons
+
+%h2
+  CSS
+  = clippy(@css)
+
+%textarea{ :rows => 25 }= @css
