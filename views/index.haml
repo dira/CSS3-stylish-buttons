@@ -1,67 +1,45 @@
 %p
-  Yesterday I found the super yummy
+  I always wondered how designers get the perfect combination of colors and effects. Like, for example, these super yummy
   %a{ :href => "http://www.webdesignerwall.com/demo/css-buttons.html"} pure-CSS buttons
-  designed by
+  from
   %a{ :href => "http://www.webdesignerwall.com/tutorials/css3-gradient-buttons/" } Web Designer Wall
   %span> .
 
 %p
-  Wondering how one could use this design wisdom despite not posessing the art of subtle gradients and matching colors, I created code that does this for you by magic. And by magic I mean 
-  %a{ :href => "http://sass-lang.com/" } Sass
-  with mixins and the new powerful
-  %a{ :href => "http://nex-3.com/posts/89-powerful-color-manipulation-with-sass"} color functions
-  from version 3.0.
+  So, I looked for a pattern for colors, and figured out how it works. Then I wrote some Sass mixins and now I can generate them starting from any color. The ones below, for example, I picked from
+  %a{ :href => "http://lh5.ggpht.com/_TnpVkbNvkMc/TNDBR3sNA3I/AAAAAAAAy1Y/3p_t00F68C4/s400/IMG_1444.JPG" } my favourite hat.
 
-%p
-  This means that you are not restricted to the (wonderful) colors for which you have the CSS from the
-  %a{ :href => "http://www.webdesignerwall.com/tutorials/css3-gradient-buttons/" } Web Designer Wall tutorial
-  %span> ...
 .buttons
-  %input.button.orange{ :type => "submit", :value => "Button" }
-    %a.button.blue Link
-  %a.button.red.rounded Rounded
-  %a.button.green.medium Medium
-  %a.button.pink.small Small
+  %a.button.orange Green
+  %a.button.green Pink
+  %a.button.blue Violet
+  %a.button.violet Orange
+  %a.button.pink Blue
 
-%p ... but you can easily make buttons with the colors you want:
-.buttons
-  %input.button.dark_green{ :type => "submit", :value => "Button" }
-    %a.button.violet Link
-  %a.button.olive.rounded Rounded
-  %a.button.dark_blue.medium Medium
-  %a.button.brown.small Small
-
-%h2 How to do this
+%h2 Get the goodness
 %ul
   %li
-    %h3 You have no idea what Sass is
+    %h3 If you don't know Sass
     %p
-      %a.button.black{ :href => "/generator" } Generate CSS
+      %a.button.black{ :href => "/generator" } Generate the CSS
       for any color you can imagine
   %li
-    %h3 You love Sass
+    %h3 If you would die without Sass
     %ol
       %li
         %p
           Copy the
-          %a{ :href => "stylesheets/sass/_buttons.sass" } Buttons mixin file
+          %a{ :href => "stylesheets/sass/_buttons.sass" } Buttons mixins
           in your Sass folder
       %li
-        %p Put this code in your Sass file
+        %p Put this in your Sass file
         <script src="http://gist.github.com/655550.js?file=your.sass"></script>
       %li
-        %p And this code in your Haml file
+        %p And this in your Haml file
         <script src="http://gist.github.com/655550.js?file=your.haml"></script>
 
     %p
       You'll get a nice button as an input field:
-      %input.button.dark_green{ :type => "submit", :value => "Submit" }
+      %input.button.red{ :type => "submit", :value => "Submit" }
         and as a link:
-      %a.button.dark_green Click me
-
-    %p
-      Change the color in your Sass file to the one you like (you can use the
-      %a{ :href => "http://html-color-codes.com/"} Web color chart
-      or the
-      %a{ :href => "/generator" } stylish buttons CSS generator
-      %span> ).
+      %a.button.red Click me

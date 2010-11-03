@@ -15,7 +15,7 @@ class CSSButtons < Sinatra::Base
   get '/generator' do
     @title = "Generate CSS for stylish buttons"
     @navigation = [['home', '/'], ['CSS generator']]
-    @color = h(params["color"] || "C33")
+    @color = h(params["color"] || "d22")
     haml :generator
   end
 
