@@ -1,4 +1,4 @@
-The Sinatra app that powers "http://css3-buttons.heroku.com/":http://css3-buttons.heroku.com/.
+The Sinatra app that powers "http://css3-buttons.herokuapp.com/":http://css3-buttons.herokuapp.com/.
 
 The application presents a sass mixin for getting stylish CSS3 buttons...
 
@@ -12,6 +12,6 @@ bc. import '_buttons'
   @include color(#d22)
 
 
-Also, the mixin is evaluated in the context of a specific color to "generate CSS code":http://css3-buttons.heroku.com/generator for users that don't know Sass.
+Also, the mixin is evaluated in the context of a specific color to "generate CSS code":http://css3-buttons.herokuapp.com/generator for users that don't know Sass.
 
 !http://img.skitch.com/20101103-bjx24fbnndhrctprgwmykqyc1r.gif!
